@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "name": "Arijit Singh",
+    "profession":"Singer",
+    "category": "Singers",
+    "priceRange": "₹50,000 - ₹1,00,000",
+    "location": "Mumbai, MH",
+    "image": "https://influencersplace.com/wp-content/uploads/2024/12/Arijit-Singh.webp",
+    "desc": "Arijit Singh is an Indian playback singer, composer and music producer. A leading figure in contemporary Hindi film music, he is the recipient of several accolades including two National Film Awards and seven Filmfare Awards."
+  },
+  {
+    "id": 2,
+    "name": "Prabhu Deva",
+    "profession": "Dancer",
+    "category": "Dancers",
+    "priceRange": "₹30,000 - ₹70,000",
+    "location": "Delhi, DL",
+    "image": "https://cinemarumble.com/wp-content/uploads/2023/10/Prabhu-Deva-Dance-780x450.jpg",
+    "desc": "Prabhu Deva is an Indian dance choreographer, film director, producer and actor who has worked predominantly in Tamil, Hindi and Telugu language films also appeared in few Kannada and Malayalam films."
+  },
+  {
+    "id": 3,
+    "name": "Abhishek Upmanyu",
+    "category": "Stand-Up Comedians",
+    "profession": "comedian",
+    "priceRange": "₹80,000 - ₹1,50,000",
+    "location": "Bengaluru, KA",
+    "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTJSKcslkTLUWFtK-dZu1RxxaqcxU5zCIbRNl6THeKo2h-ItY-Pyvicmu61EbIW8n-Dxw_eLxlH2F2FcxmZgYKERQ",
+    "desc": "Abhishek Upmanyu’s comedy journey has been nothing short of extraordinary. Because he has been able to captivate audiences all around the world with his thought-provoking and funny performances. With millions of views on YouTube."
+  },
+
+  {
+    "id": 4,
+    "name": "DJ Nyk",
+    "category": "DJs",
+    "profession": "Dj",
+    "priceRange": "₹60,000 - ₹1,20,000",
+    "location": "Goa, GA",
+    "image": "https://resources.tidal.com/images/57c779e8/4c13/4155/a284/5a1a2ecd30c7/750x750.jpg",
+    "desc": "Nikhil Sahni also known as DJ NYK is an Indian DJ, music producer, radio host, VJ, music career coach, and label owner at Play Life records. He is widely known for his Bollywood remixes, mashups, and his live sets in locations like Lake Pichola and Kerala backwaters."
+  },
+    {
+      "id": 5,
+      "name": "Shreya Goshal",
+      "category": "Singers",
+      "profession": "Singer",
+      "priceRange": "₹40,000 - ₹90,000",
+      "location": "Kolkata, WB",
+      "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202503/shreya-ghoshal--ipl-2025-opening-ceremony-232316191-3x4.jpg?VersionId=k.51n79mDecaFTlJ4wF9HYzOGCBdCTeU",
+      "desc": "Shreya Ghoshal is an Indian singer. Noted for her wide vocal range and versatility, she is one of the most prolific and influential singers of India."
+    },
+    {
+      "id": 6,
+      "name": "Remo D'Souza",
+      "category": "Dancers",
+      "profession": "Dancer",
+      "priceRange": "₹35,000 - ₹80,000",
+      "location": "Chennai, TN",
+      "image": "https://images.indianexpress.com/2020/12/remo-dsouza-.jpg",
+      "desc": "Remo D'Souza is an Indian choreographer, film director, and producer. Over the course of his career spanning more than 25 years, D'Souza has choreographed more than 100 films."
+    },
+    {
+      "id": 7,
+      "name": "Manik Manha",
+      "category": "Stand-Up Comedians",
+      "profession": "comedian",
+      "priceRange": "₹70,000 - ₹1,30,000",
+      "location": "Ahmedabad, GJ",
+      "image": "https://admin.hire4event.com/assets/artistimage/1684317251hjkhjgkhghgh.jpg",
+      "desc": "Manik Mahna is an up and coming Indian comedian from Delhi, who has performed at several comedy shows and events. His style of dry, almost offensive but incredibly funny sort of comedy is what he's best known and loved for."
+    },
+    {
+      "id": 8,
+      "name": "Nucleya",
+      "category": "DJs",
+      "profession": "Dj",
+      "priceRange": "₹50,000 - ₹1,00,000",
+      "location": "Pune, MH",
+      "image": "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/1/2017/11/07153215/071117_Nucleya.jpg",
+      "desc": "Udyan Sagar, better known by his stage name Nucleya, is an Indian electronic music producer and DJ."
+    },
+    {
+      "id": 9,
+      "name": "Sunidhi Chauhan",
+      "category": "Singers",
+      "profession": "Singer",
+      "priceRange": "₹60,000 - ₹1,10,000",
+      "location": "Hyderabad, TS",
+      "desc": "Sunidhi Chauhan is an Indian playback singer. Known for her bold vocal range, she has recorded songs for films in several Indian languages and received accolades including three Filmfare Awards and a Filmfare Award South.",
+      "image": "https://static.india.com/wp-content/uploads/2024/08/Sunidhi-Chauhan.jpg?impolicy=Medium_Resize&w=1200&h=800"
+    },
+    {
+      "id": 10,
+      "name": "Raghav Juyal",
+      "category": "Dancers",
+      "profession": "Dancer",
+      "priceRange": "₹25,000 - ₹60,000",
+      "location": "Jaipur, RJ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFxX3w-8ip7TaVNpj-OLGFDtuVrpI6bUF_Og&s",
+      "desc": "Raghav Juyal is an Indian actor, dancer, choreographer, and television presenter. He is popularly known as 'Crockroaxz' or the 'King of Slow Motion' for his surreal dance moves in slow motion style and for his reinvention of the Slow Motion Walk in India."
+    },
+    {
+      "id": 11,
+      "name": "Swati Sachdeva",
+      "category": "Stand-Up Comedians",
+      "profession": "comedian",
+      "priceRange": "₹90,000 - ₹1,60,000",
+      "location": "Lucknow, UP",
+      "image": "https://sosimg.sgp1.cdn.digitaloceanspaces.com/artist-gallery/2957742_1701943895.webp",
+      "desc": "Swati Sachdeva is a popular Indian stand-up comedian, writer and content creator. She began her professional journey as a freelance content writer and held positions such as Marketing Intern at Comedy Manch."
+    },
+    {
+      "id": 12,
+      "name": "DJ Pearl",
+      "category": "DJs",
+      "profession": "Dj",
+      "priceRange": "₹55,000 - ₹1,10,000",
+      "location": "Pune, MH",
+      "image": "https://www.djpearl.in/img/sixth_big_item.jpg",
+      "desc": "DJ Pearl is a DJ / Producer. Situated in Pune, India. Her amass ranges over the Genre of :- Commercial, Hip-Hop, EDM, House, Techno, Bolywood and lot more."
+    },
+    {
+      "id": 13,
+      "name": "Shankar Mahadevan",
+      "category": "Singers",
+      "profession": "Singer",
+      "priceRange": "₹45,000 - ₹95,000",
+      "location": "Indore, MP",
+      "image": "https://yt3.googleusercontent.com/2A9TSGmcFEt5VnHJInKRWREG4umB51f5mT4KXd9JUolJCLmLN4OApi01UEe7-aTyUi0MCcSkNQ=s900-c-k-c0x00ffffff-no-rj",
+      "desc": "Shankar Mahadevan is an Indian singer and composer who is part of the Shankar–Ehsaan–Loy trio that writes music for Indian films. In 2023, he was awarded an honorary doctorate by Birmingham City University."
+    },
+    {
+      "id": 14,
+      "name": "Dharmesh Yelande",
+      "category": "Dancers",
+      "profession": "Dancer",
+      "priceRange": "₹40,000 - ₹85,000",
+      "location": "Surat, GJ",
+      "image": "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/12/12/Pictures/_c5c4c6d8-3c52-11eb-8fd5-c6d261157c1a.jpg",
+      "desc": "Hailing from Vadodara, Gujarat, Dharmesh Yelande is an Indian dancer and choreographer, who rose to fame with the dance-reality show Dance India Dance Season 2. Informally called as Dharmesh Sir, he is known for his expertise in freestyle, locking and popping, and hip-hop dance forms."
+    }
+]
