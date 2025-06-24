@@ -13,18 +13,7 @@ export default function ArtistPage({ artistData }) {
   const [categoryValue, setCategoryValue] = useState(null);
   const [locationValue, setLocationValue] = useState(null);
   const [priceRange, setPriceRange] = useState(null)
-  const parsedArtistData = artistData.map((artist) => {
-  const [minStr, maxStr] = artist.priceRange
-      .replace(/[₹,]/g, "")
-      .split(" - ");
-    return {
-      ...artist,
-      minPrice: parseInt(minStr),
-      maxPrice: parseInt(maxStr),
-    };
-  });
-
-  const allPrices = parsedArtistData.flatMap((artist) => [
+  const allPrices = artistData.flatMap((artist) => [
     artist.minPrice,
     artist.maxPrice,
   ]);
