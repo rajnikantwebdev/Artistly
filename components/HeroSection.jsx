@@ -4,7 +4,6 @@ const HeroSection = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        {/* Main Heading */}
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent leading-tight">
             Discover & Book
@@ -17,7 +16,6 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* CTA Button */}
         <div className="pt-4">
           <Button 
             size="lg" 
@@ -27,7 +25,6 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-50 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-16 h-16 bg-blue-200 rounded-full opacity-50 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-20 w-12 h-12 bg-indigo-200 rounded-full opacity-30 animate-pulse delay-500"></div>

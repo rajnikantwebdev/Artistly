@@ -35,7 +35,7 @@ const cardsData = [
 const CardsContainers = () => {
   return (
     <div
-    className="grid grid-cols-1 sm:grid-cols-2 bg-white lg:grid-cols-2 gap-6 px-6 w-full"
+    className="grid grid-cols-1 sm:grid-cols-2 bg-white lg:grid-cols-2 gap-6 px-6 w-full mb-8"
   >
     {cardsData.map((card) => {
         return (

@@ -20,22 +20,29 @@ export function Header() {
     >
       <NavigationMenuList className=" w-full">
         <NavigationMenuItem>
-          <Image src={"/artistly.svg"} width={110} height={120} alt="artistly"/>
+          <Image
+            src={"/artistly.svg"}
+            width={110}
+            height={120}
+            alt="artistly"
+          />
         </NavigationMenuItem>
         <div className="flex items-center">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+            <NavigationMenuLink
+              asChild
+              className={navigationMenuTriggerStyle()}
+            >
+              <Link href="/artists">Artists</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink
               asChild
               className={navigationMenuTriggerStyle()}
             >
-              <Link href="/docs">Docs</Link>
+              <Link href="/artist-onboarding">Artist onboarding</Link>
             </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>List</NavigationMenuTrigger>
           </NavigationMenuItem>
         </div>
       </NavigationMenuList>

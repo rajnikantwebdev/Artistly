@@ -1,9 +1,17 @@
 "use client"
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ArtistCard from "./ArtistCard";
 import { MicVocal, User, Footprints, Laugh, Disc3 } from "lucide-react";
+import Filters from "./Filters";
+import Image from "next/image";
 
 export default function ArtistPage({ artistData }) {
+  const [filteredArtistData, setFilteredArtistData] = useState(null)
+  const categoryFilter = artistData !== null && Array.from(new Set(artistData.map((artist) => artist.category)))
+  const locationFilter = artistData !== null && Array.from(new Set(artistData.map((artist) => artist.location)));
+  const [categoryValue, setCategoryValue] = useState(null);
+  const [locationValue, setLocationValue] = useState(null)
+
   const getIcon = (profession) => {
     switch (profession) {
       case "singer":
@@ -18,6 +26,30 @@ export default function ArtistPage({ artistData }) {
         User;
     }
   };
+
+  useEffect(() => {
+    let filtered = artistData;
+
+    if (categoryValue) {
+      filtered = filtered.filter(
+        (artist) =>
+          artist.category.toLowerCase() === categoryValue.toLowerCase()
+      );
+    }
+
+    if (locationValue) {
+      filtered = filtered.filter(
+        (artist) =>
+          artist.location.toLowerCase() === locationValue.toLowerCase()
+      );
+    }
+
+    setFilteredArtistData(filtered);
+  }, [categoryValue, locationValue, artistData]);
+  
+
+  console.log("filter-data: ", filteredArtistData);
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -30,12 +62,20 @@ export default function ArtistPage({ artistData }) {
             Discover talented artists ready to make your event unforgettable
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {artistData.map((artist) => {
+        <div className="flex items-center mb-10 gap-6">
+          <Filters position={categoryValue} setPosition={setCategoryValue} title={"Category"} filtersValue={categoryFilter} /> <Filters position={locationValue} setPosition={setLocationValue} title={"Location"} filtersValue={locationFilter} />
+        </div>
+
+        {filteredArtistData !== null && filteredArtistData.length !== 0 ? (<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {filteredArtistData.map((artist) => {
             const Icon = getIcon(artist.profession.toLowerCase())
             return <ArtistCard key={artist.id} artist={artist} Icon={Icon} />;
           })}
-        </div>
+        </div>) : <div className=" flex justify-center">
+          <div className="flex flex-col items-center">
+            <Image src="/empty-box.png" width={300} height={300} alt="No Artist Found" />
+            <span className="text-xl ">Sorry, No Artist Found</span>
+            </div></div>}
       </div>
     </div>
   );

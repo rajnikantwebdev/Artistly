@@ -1,11 +1,9 @@
 import React from 'react'
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MicVocal, User, Megaphone, Music, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
-const ArtistCard = ({artist, Icon}) => {
-    console.log(<Icon />);
-    
+const ArtistCard = ({artist, Icon}) => {    
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white/80 backdrop-blur-sm border-0 shadow-lg px-0 py-0">
       <CardContent className="w-2/5 py-6">
