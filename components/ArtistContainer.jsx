@@ -9,8 +9,36 @@ export default function ArtistPage({ artistData }) {
   const [filteredArtistData, setFilteredArtistData] = useState(null)
   const categoryFilter = artistData !== null && Array.from(new Set(artistData.map((artist) => artist.category)))
   const locationFilter = artistData !== null && Array.from(new Set(artistData.map((artist) => artist.location)));
+  
   const [categoryValue, setCategoryValue] = useState(null);
-  const [locationValue, setLocationValue] = useState(null)
+  const [locationValue, setLocationValue] = useState(null);
+  const [priceRange, setPriceRange] = useState(null)
+  const parsedArtistData = artistData.map((artist) => {
+  const [minStr, maxStr] = artist.priceRange
+      .replace(/[₹,]/g, "")
+      .split(" - ");
+    return {
+      ...artist,
+      minPrice: parseInt(minStr),
+      maxPrice: parseInt(maxStr),
+    };
+  });
+
+  const allPrices = parsedArtistData.flatMap((artist) => [
+    artist.minPrice,
+    artist.maxPrice,
+  ]);
+  const minPrice = Math.min(...allPrices);
+  const maxPrice = Math.max(...allPrices);
+
+  const step = 20000;
+
+  const priceBuckets = [];
+  for (let start = minPrice; start < maxPrice; start += step) {
+    const end = start + step;
+    priceBuckets.push(
+      `₹${start.toLocaleString()} - ₹${end.toLocaleString()}`);
+  }
 
   const getIcon = (profession) => {
     switch (profession) {
@@ -44,12 +72,19 @@ export default function ArtistPage({ artistData }) {
       );
     }
 
-    setFilteredArtistData(filtered);
-  }, [categoryValue, locationValue, artistData]);
-  
+    if (priceRange) {
+      const [minStr, maxStr] = priceRange.replace(/[₹,]/g, "").split(" - ");
+      const min = parseInt(minStr);
+      const max = parseInt(maxStr);
+      
+      filtered = filtered.filter(
+        (artist) => artist.minPrice <= max && artist.maxPrice >= min
+      );
+    }
 
-  console.log("filter-data: ", filteredArtistData);
-  
+    setFilteredArtistData(filtered);
+  }, [categoryValue, locationValue, priceRange, artistData]);
+    
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -64,6 +99,7 @@ export default function ArtistPage({ artistData }) {
         </div>
         <div className="flex items-center mb-10 gap-6">
           <Filters position={categoryValue} setPosition={setCategoryValue} title={"Category"} filtersValue={categoryFilter} /> <Filters position={locationValue} setPosition={setLocationValue} title={"Location"} filtersValue={locationFilter} />
+          <Filters title={"Price Range"} filtersValue={priceBuckets} position={priceRange} setPosition={setPriceRange} />
         </div>
 
         {filteredArtistData !== null && filteredArtistData.length !== 0 ? (<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
