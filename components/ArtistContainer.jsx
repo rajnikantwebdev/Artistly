@@ -76,7 +76,7 @@ export default function ArtistPage({ artistData }) {
       const [minStr, maxStr] = priceRange.replace(/[₹,]/g, "").split(" - ");
       const min = parseInt(minStr);
       const max = parseInt(maxStr);
-      
+
       filtered = filtered.filter(
         (artist) => artist.minPrice <= max && artist.maxPrice >= min
       );
@@ -97,7 +97,7 @@ export default function ArtistPage({ artistData }) {
             Discover talented artists ready to make your event unforgettable
           </p>
         </div>
-        <div className="flex items-center mb-10 gap-6">
+        <div className="flex flex-wrap items-center mb-10 gap-6">
           <Filters position={categoryValue} setPosition={setCategoryValue} title={"Category"} filtersValue={categoryFilter} /> <Filters position={locationValue} setPosition={setLocationValue} title={"Location"} filtersValue={locationFilter} />
           <Filters title={"Price Range"} filtersValue={priceBuckets} position={priceRange} setPosition={setPriceRange} />
         </div>

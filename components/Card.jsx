@@ -13,9 +13,9 @@ import Link from "next/link";
 
 const ArtistCard = ({title, description, imgSrc}) => {
   return (
-    <Card className="p-0">
-      <div className="w-1/4 bg-gray-100 rounded-l-2xl px-4 flex items-center">
-        <div className="relative w-fit overflow-hidden rounded-full lg:p-2 p-1 ring-4 ring-purple-500">
+    <Card className="p-0 md:flex ">
+      <div className="md:w-1/4 bg-gray-100 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl px-4 flex items-center">
+        <div className="relative md:w-fit w-full flex justify-center overflow-hidden md:rounded-full lg:p-2 p-1 md:ring-4 ring-purple-500">
           <Image
             src={imgSrc}
             width={100}
@@ -26,17 +26,11 @@ const ArtistCard = ({title, description, imgSrc}) => {
         </div>
       </div>
 
-      <div className="w-3/4 py-6 px-4">
+      <div className="md:w-3/4 py-6 px-4">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
           <CardDescription>{description}</CardDescription>
         </CardHeader>
-        {/* <CardContent>
-          <p>Card Content</p>
-        </CardContent>
-        <CardFooter>
-          <p>Card Footer</p>
-        </CardFooter> */}
         <div className="px-6 my-2">
           <CardAction>
             <Link href={"/artists"}>Book Now </Link>
