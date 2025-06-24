@@ -53,7 +53,4 @@ const Filters = ({title, filtersValue, position, setPosition}) => {
     );
 }
 
-
-
-
 export default Filters
